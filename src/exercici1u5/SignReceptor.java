@@ -37,7 +37,7 @@ public class SignReceptor {
         try {
             fis = new FileInputStream(fitxer);
             bis = new BufferedInputStream(fis);
-            Signature signer = Signature.getInstance("SHA1withRSA");
+            Signature signer = Signature.getInstance("SHA256withRSA");
             signer.initVerify(pub);
             while (bis.available() != 0) {
                 mida = bis.read(buffer);

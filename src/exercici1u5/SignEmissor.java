@@ -53,7 +53,7 @@ public class SignEmissor {
         int mida;
         try {
             //Inicialitzem el Signature per fer la firma amb el seu algoritme.
-            Signature signer = Signature.getInstance("SHA1withRSA");
+            Signature signer = Signature.getInstance("SHA256withRSA");
             signer.initSign(pKey);
             fis = new FileInputStream(fitxer);
             bis = new BufferedInputStream(fis);
